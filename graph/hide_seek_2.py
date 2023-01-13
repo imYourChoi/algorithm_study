@@ -29,7 +29,6 @@ def bfs(N, M):
         for current in curDict:
             temp |= check(current, current - 1, newDict, curDict, M)
             temp |= check(current, current + 1, newDict, curDict, M)
-            # if current + 1 != current * 2:
             temp |= check(current, current * 2, newDict, curDict, M)
         for key in newDict:
             visited[key] = True
