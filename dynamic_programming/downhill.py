@@ -5,12 +5,9 @@ arr = [list(map(int, input().split())) for _ in range(M)]
 
 xCor, yCor = [-1,1,0,0], [0,0,1,-1]
 ways = [[-1] * N for _ in range(M)]
-answer = 0
 
 def downhill(x,y):
-    global answer
     if y == M-1 and x == N-1:
-        answer += 1
         return 1
     
     value = arr[y][x]
