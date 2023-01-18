@@ -18,6 +18,15 @@ for i in range(1,n):
 
 print(max(dp)[0])
 
+# =================================================
+
+# for i in range(1,n):
+#     arr[i] = max(arr[i], arr[i] + arr[i-1])
+
+# print(arr)
+
+# =================================================
+
 # dp = [{}] + [{i:arr[i]} for i in range(1,n+1)]
 
 # for i in range(2,n+1):
