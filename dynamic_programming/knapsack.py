@@ -1,7 +1,6 @@
 # https://www.acmicpc.net/problem/12865
 
 import sys
-sys.stdin.readline
 n, k = map(int, input().split())
 
 arr = [[0,0]] + [list(map(int, input().rstrip().split())) for _ in range(n)]
