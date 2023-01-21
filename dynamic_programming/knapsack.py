@@ -1,9 +1,8 @@
 # https://www.acmicpc.net/problem/12865
 
-import sys
 n, k = map(int, input().split())
 
-arr = [[0,0]] + [list(map(int, input().rstrip().split())) for _ in range(n)]
+arr = [[0,0]] + [list(map(int, input().split())) for _ in range(n)]
 
 dp = [{} for _ in range(n+1)]
 
