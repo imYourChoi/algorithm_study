@@ -1,5 +1,4 @@
-# https://www.acmicpc.net/problem/15649
-# 순열 구하는 문제
+# https://www.acmicpc.net/problem/15651
 
 a, b = map(int, input().split())
 
@@ -10,9 +9,6 @@ def series(array, string, index):
             print(p.strip())
     else:
         for num in array:
-            # if num in map(int, string.split()): return
-            newArray = array.copy()
-            newArray.remove(num)
-            series(newArray, "%s %d" % (string, num), index-1)
+            series(array, "%s %d" % (string, num), index-1)
 
 series([x+1 for x in range(a)], "", b)
