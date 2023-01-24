@@ -27,14 +27,14 @@ def chess(arr, index):
     if index == n:
         answer += 1
         return
-    for i in range(n):
+    for x in range(n):
         flag = True
-        for idx in range(index):
-            if board[idx] == i or abs(i - board[idx]) == index-idx:
+        for y in range(index):
+            if board[y] == x or abs(x - board[y]) == index-y:
                 flag = False
                 break
         if flag:
-            arr[index] = i
+            arr[index] = x
             chess(arr, index+1)
 
 chess(board, 0)
