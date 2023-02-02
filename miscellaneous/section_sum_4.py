@@ -1,8 +1,8 @@
 # https://www.acmicpc.net/problem/11659
 
+from itertools import accumulate
 import sys
 input=sys.stdin.readline
-from itertools import accumulate
 
 n,m = map(int,input().split())
 nums = list(accumulate((map(int, input().split()))))
