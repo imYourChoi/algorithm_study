@@ -18,3 +18,5 @@ while start <= end:
         start = mid + 1
 
 print(answer)
+
+# https://claude-u.tistory.com/449
