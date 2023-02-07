@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/5525
+# https://black-hair.tistory.com/135
 
 n,m,s = int(input()), int(input()), input()
 
