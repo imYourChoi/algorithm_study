@@ -1,5 +1,7 @@
 # https://www.acmicpc.net/problem/10026
 
+import sys
+sys.setrecursionlimit(10 ** 8)
 n = int(input())
 colors = [[*input()] for _ in range(n)]
 visited = [[False] * n for _ in range(n)]
@@ -22,7 +24,7 @@ for y in range(n):
         if not visited[y][x]:
             bfs(y,x)
             normal += 1
-# print(*colors, sep="\n")
+
 weak = 0
 visited = [[False] * n for _ in range(n)]
 for y in range(n):
@@ -32,4 +34,3 @@ for y in range(n):
             weak += 1
 
 print(normal, weak)
-# print(visited)
