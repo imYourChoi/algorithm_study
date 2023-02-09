@@ -18,9 +18,6 @@ def bfs():
             current, command = queue.popleft()
             D = (current * 2) % 10000
             S = current - 1 if current else 9999
-            # t = str(current).zfill(4)
-            # L = int(t[1:4] + t[0])
-            # R = int(t[3] + t[0:3])
             L = (current % 1000) * 10 + current // 1000
             R = (current % 10) * 1000 + current // 10
             for num, op in zip([D,S,L,R], ["D", "S", "L", "R"]):
