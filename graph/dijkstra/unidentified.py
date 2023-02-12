@@ -37,9 +37,6 @@ for _ in range(int(input())):
     fromG = dijkstra(g, candidates)
     fromH = dijkstra(h, candidates)
 
-    # print(distances)
-    # print(betweenGH)
-    # print(fromGH)
     for candidate in candidates:
         if distances[candidate] != inf and distances[candidate] == min(distances[g] + betweenGH[h] + fromH[candidate], distances[h] + betweenGH[h] + fromG[candidate]):
             print(candidate, end=" ")
