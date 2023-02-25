@@ -26,7 +26,10 @@ def make_one():
                 if v == 1:
                     return new[-1]
         dp = new
-
-answer = make_one()
-print(len(answer)-1)
-print(*answer)
+if n == 1:
+    print(0)
+    print(1)
+else:
+    answer = make_one()
+    print(len(answer)-1)
+    print(*answer)
