@@ -69,5 +69,4 @@ for _ in range(T):
     spread()
     clean()
 
-# print(*house, sep="\n")
 print(total)
