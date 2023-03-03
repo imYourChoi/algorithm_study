@@ -1,3 +1,5 @@
+# https://www.acmicpc.net/problem/1157
+
 word = input()
 d = {}
 for char in word.lower():

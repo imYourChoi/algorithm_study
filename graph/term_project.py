@@ -34,3 +34,5 @@ for _ in range(int(input())):
     answer.append(n-together)
 
 print(*answer, sep="\n")
+
+# 참고 https://www.acmicpc.net/source/53132089

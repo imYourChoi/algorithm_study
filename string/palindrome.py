@@ -1,4 +1,4 @@
-https://www.acmicpc.net/problem/1259
+# https://www.acmicpc.net/problem/1259
 
 def palindrome(n, l, r):
     if l >= r:
