@@ -9,14 +9,13 @@ queue = deque([])
 visited = [[[[False] * M for _ in range(N)] for _ in range(M)] for _ in range(N)]
 
 def init():
-    Ry, Rx, By, Bx = 0, 0, 0, 0  # 초기화
+    Ry, Rx, By, Bx = 0, 0, 0, 0
     for i in range(N):
         for j in range(M):
             if board[i][j] == 'R':
                 Ry, Rx = i, j
             elif board[i][j] == 'B':
                 By, Bx = i, j
-    # 위치 정보와 depth(breadth 끝나면 +1)
     queue.append((Ry, Rx, By, Bx, 1))
     visited[Ry][Rx][By][Bx] = True
 
