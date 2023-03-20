@@ -6,7 +6,7 @@ input = sys.stdin.readline
 N,C = map(int, input().split())
 house = sorted([int(input()) for _ in range(N)])
 answer = 0
-start, end = 0, house[-1] - house[0]
+start, end = 0, (house[-1] - house[0]) // (C-1) + 1
 
 if C == 2:
     print(house[-1] - house[0])
@@ -27,3 +27,5 @@ else:
         else:
             end = mid
     print(answer)
+
+# https://my-coding-notes.tistory.com/119
