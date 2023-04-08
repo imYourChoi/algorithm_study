@@ -3,7 +3,7 @@
 const fs = require("fs");
 // const [n, ...input] = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
 const [n, ...input] = fs
-  .readFileSync(__dirname + "/input.txt")
+  .readFileSync(__dirname + "/../input.txt")
   .toString()
   .trim()
   .split("\n");
