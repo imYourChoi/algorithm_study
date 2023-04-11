@@ -1,6 +1,13 @@
 // https://www.acmicpc.net/problem/2559
 
-const input = require("../input.js");
+const stdin = require("fs")
+  .readFileSync(process.platform === "linux" ? "/dev/stdin" : __dirname + "/input.txt")
+  .toString()
+  .split("\n");
+const input = (() => {
+  let line = 0;
+  return () => stdin[line++];
+})();
 
 const [N, K] = input().split(" ").map(Number);
 const numbers = input().split(" ").map(Number);
