@@ -1,7 +1,7 @@
 // https://www.acmicpc.net/problem/2559
 
 const stdin = require("fs")
-  .readFileSync(process.platform === "linux" ? "/dev/stdin" : __dirname + "/input.txt")
+  .readFileSync(process.platform === "linux" ? "/dev/stdin" : __dirname + "/../input.txt")
   .toString()
   .split("\n");
 const input = (() => {
