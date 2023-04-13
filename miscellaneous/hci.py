@@ -1,6 +1,9 @@
 # https://www.acmicpc.net/problem/16139
 
-s = input()
+import sys
+input = sys.stdin.readline
+
+s = input().strip()
 answer = []
 acc = [[0 for i in range(len(s))] for i in range(26)]
 set = set()
