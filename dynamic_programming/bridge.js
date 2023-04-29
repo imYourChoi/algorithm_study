@@ -14,7 +14,6 @@ const T = +input();
 
 for (let i = 0; i < T; i++) {
   const [N, M] = input().split(" ").map(Number);
-
   const dp = Array.from({ length: N }, () => Array(M).fill(0));
 
   for (let i in dp) {
