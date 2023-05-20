@@ -1,4 +1,5 @@
 // https://www.acmicpc.net/problem/4195
+// https://www.acmicpc.net/source/55497489
 
 const stdin = require("fs")
   .readFileSync(process.platform === "linux" ? "/dev/stdin" : __dirname + "/../../input.txt")
