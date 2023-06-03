@@ -16,7 +16,6 @@ const nums = input()
   .map(Number)
   .sort((a, b) => a - b);
 const budget = +input();
-// const sum = nums.reduce((a, b) => a + b, 0);
 
 let start = 0,
   end = nums.reduce((a, b) => Math.max(a, b));
