@@ -1,8 +1,8 @@
 ## Algorithm Study
 
-💎 A repository to record the traces of my <b>algorithm study</b>.<br/>
+💎 A repository to document my journey of mastering <b>algorithmic problem-solving</b>.<br/>
 
-- Problems are classified by algorithm category.<br/>
-- Problems are mostly from Baekjoon and some from Programmers.<br/>
-- I am trying to solve at least one problem a day, even if it is a simple one.<br/>
-- Language: Python3 & Javascript<br/>
+- Problems are categorized by algorithm type.<br/>
+- The majority of the problems are from Baekjoon, with some from Programmers.<br/>
+- My goal is to solve at least one problem daily, no matter how simple.<br/>
+- Languages: Python3 & JavaScript<br/>
