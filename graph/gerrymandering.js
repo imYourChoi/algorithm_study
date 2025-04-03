@@ -74,8 +74,6 @@ for (const comb of combinations) {
   if (checkConnected(firstAreaSet) && checkConnected(secondAreaSet)) {
     const firstAreaPopulation = Array.from(firstAreaSet).reduce((acc, cur) => acc + populations[cur], 0);
     const secondAreaPopulation = Array.from(secondAreaSet).reduce((acc, cur) => acc + populations[cur], 0);
-    // console.log(firstAreaSet, secondAreaSet);
-    // console.log(firstAreaPopulation, secondAreaPopulation);
     answer = Math.min(answer, Math.abs(firstAreaPopulation - secondAreaPopulation));
   }
 }
