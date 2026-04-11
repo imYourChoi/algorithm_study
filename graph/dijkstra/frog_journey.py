@@ -15,30 +15,31 @@ def check_grid(y, x):
     return 0 <= y < N and 0 <= x < N
 
 
-def findStones(y, x, jump):
-    stones = []
-    for dy, dx in directions:
-        for i in range(1, 6):
-            ny, nx = y + (dy * i), x + (dx * i)
+precalculatedStones = [[[] for _ in range(N)] for _ in range(N)]
 
-            if not check_grid(ny, nx):
-                continue
-            if lake[ny][nx] == "#":
-                break
-            if lake[ny][nx] == "S":
-                continue
+for y in range(N):
+    for x in range(N):
+        for dy, dx in directions:
+            for i in range(1, 6):
+                ny, nx = y + (dy * i), x + (dx * i)
+                if not check_grid(ny, nx):
+                    continue
+                if lake[ny][nx] == "#":
+                    break
+                if lake[ny][nx] == "S":
+                    continue
 
-            if i == jump:
-                stones.append((1, ny, nx, jump))
-            elif i < jump:
-                stones.append((1, ny, nx, i))
-            else:
-                time = 0
-                for i in range(jump+1, i+1):
-                    time += i ** 2
-                stones.append((time, ny, nx, i))
+                precalculatedStones[y][x].append((ny, nx, i))
 
-    return stones
+
+def calculateDist(curJump, newJump):
+    if curJump >= newJump:
+        return 1
+    else:
+        time = 0
+        for i in range(curJump+1, newJump+1):
+            time += i ** 2
+        return time
 
 
 def travel():
@@ -49,7 +50,6 @@ def travel():
     distances[r1][c1][1] = 0
     heap = [(0, (r1, c1), 1)]
 
-    visited = [False] * 5
     while heap:
         dist, (cy, cx), curJump = heapq.heappop(heap)
 
@@ -59,9 +59,10 @@ def travel():
         if distances[cy][cx][curJump] < dist:
             continue
 
-        stones = findStones(cy, cx, curJump)
+        stones = precalculatedStones[cy][cx]
 
-        for dist, sy, sx, newJump in stones:
+        for sy, sx, newJump in stones:
+            dist = calculateDist(curJump, newJump)
             if newJump == curJump:
                 newDist = distances[cy][cx][newJump] + 1
                 if newDist < distances[sy][sx][newJump]:
